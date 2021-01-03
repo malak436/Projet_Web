@@ -205,7 +205,7 @@ require 'dbh.php';
                             <ul style="display: none;">
                                 <li><a class="active" href="blog.html">Blog</a></li>
                                 <li><a href="blog-details.html">Blog View</a></li>
-                                <li><a href="test.php">Add Blog</a></li>
+                                <li><a href="add-blog.html">Add Blog</a></li>
                                 <li><a href="edit-blog.html">Edit Blog</a></li>
                             </ul>
                         </li>
@@ -305,13 +305,13 @@ require 'dbh.php';
                         </form>
                     </div>
                     <div class="col-sm-4 col-8 text-right m-b-30">
-                        <a class="btn btn-primary btn-rounded float-right" href="test.php"><i class="fa fa-plus"></i> Add Blog</a>
-                        <a class="btn btn-primary btn-rounded float-right" href="blogAZ.php"><i class="fa fa-plus"></i> Sort A - Z </a>
-                        <a class="btn btn-primary btn-rounded float-right" href="blogZA.php"><i class="fa fa-plus"></i> Sort Z - A </a>
+                        <a class="btn btn-primary btn-rounded float-right" href="add-blog.html"><i class="fa fa-plus"></i> Add Blog</a>
                     </div>
 
                 </div>
-                <?php $result = mysqli_query($conn, "SELECT * FROM blog");
+                <?php
+                $key = $_GET['key'];
+                $result = mysqli_query($conn, "SELECT * FROM blog where blog_name LIKE '%$key%'");
                 while ($row = mysqli_fetch_array($result)) { ?>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="blog grid-blog">

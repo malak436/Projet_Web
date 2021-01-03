@@ -5,23 +5,22 @@ require 'dbh.php';
 <html lang="en">
 
 
-<!-- add-blog23:56-->
+<!-- blog23:34-->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <title>Update blog</title>
+    <title>Venus Curae - Blog</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="styles" heet" type="text/css" href="assets/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/tagsinput.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 </head>
+
 
 <body>
     <div class="main-wrapper">
@@ -204,9 +203,9 @@ require 'dbh.php';
                         <li class="submenu">
                             <a href="#"><i class="fa fa-commenting-o"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a class="active" href="blog.html">Blog</a></li>
                                 <li><a href="blog-details.html">Blog View</a></li>
-                                <li><a class="active" href="add-blog.html">Add Blog</a></li>
+                                <li><a href="test.php">Add Blog</a></li>
                                 <li><a href="edit-blog.html">Edit Blog</a></li>
                             </ul>
                         </li>
@@ -299,123 +298,43 @@ require 'dbh.php';
         <div class="page-wrapper">
             <div class="content">
                 <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <h4 class="page-title">Update Blog</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-
-
-
-
-                        <form action="" method="POST">
-                            <div class="form-group">
-                                <label>Blog Name</label>
-                                <input class="form-control" type="text" name="blogname" placeholder="Blog Name">
-                            </div>
-                            <div class="form-group">
-
-                                <label>Blog Images</label>
-                                <div>
-                                    <input class="form-control" type="file" name="blogimage">
-                                    <small class="form-text text-muted">Max. file size: 50 MB. Allowed images: jpg, gif, png. Maximum 10 images only.</small>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
-                                        <div class="product-thumbnail">
-                                            <img src="assets/img/blog/blog-thumb-01.jpg" class="img-thumbnail img-fluid" alt="">
-                                            <span class="product-remove" title="remove"><i class="fa fa-close"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
-                                        <div class="product-thumbnail">
-                                            <img src="assets/img/placeholder-thumb.jpg" class="img-thumbnail img-fluid" alt="">
-                                            <span class="product-remove" title="remove"><i class="fa fa-close"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
-                                        <div class="product-thumbnail">
-                                            <img src="assets/img/placeholder-thumb.jpg" class="img-thumbnail img-fluid" alt="">
-                                            <span class="product-remove" title="remove"><i class="fa fa-close"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
-                                        <div class="product-thumbnail">
-                                            <img src="assets/img/placeholder-thumb.jpg" class="img-thumbnail img-fluid" alt="">
-                                            <span class="product-remove" title="remove"><i class="fa fa-close"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
-                                        <div class="product-thumbnail">
-                                            <img src="assets/img/placeholder-thumb.jpg" class="img-thumbnail img-fluid" alt="">
-                                            <span class="product-remove" title="remove"><i class="fa fa-close"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
-                                        <div class="product-thumbnail">
-                                            <img src="assets/img/placeholder-thumb.jpg" class="img-thumbnail img-fluid" alt="">
-                                            <span class="product-remove" title="remove"><i class="fa fa-close"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Blog Category</label>
-                                        <select class="select">
-                                            <option>Health Care</option>
-                                            <option>Child</option>
-                                            <option>AHealth Care</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Blog Sub Category</label>
-                                        <select class="select">
-                                            <option>Health Care</option>
-                                            <option>Health Care</option>
-                                            <option>Health Care</option>
-                                            <option>Health Care</option>
-                                            <option>Health Care</option>
-                                            <option>Health Care</option>
-                                            <option>Health Care</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Blog Description</label>
-                                <textarea cols="30" rows="6" class="form-control" type="text" name="blogdescription" placeholder="Enter your blog here!"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Tags <small>(separated with a comma)</small></label>
-                                <input type="text" placeholder="Enter your tags" data-role="tagsinput" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="display-block">Blog Status</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="status" id="blog_active" value="option1" checked>
-                                    <label class="form-check-label" for="blog_active">
-                                        Active
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="status" id="blog_inactive" value="option2">
-                                    <label class="form-check-label" for="blog_inactive">
-                                        Inactive
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="m-t-20 text-center">
-                                <button class="btn btn-primary submit-btn" name="update">Publish Blog</button>
-                            </div>
+                    <div class="col-sm-8 col-4">
+                        <!-- Search form -->
+                        <form name="search" action="searchBlog.php" method="GET">
+                            <input class="form-control" name="key" type="text" placeholder="Search" aria-label="Search">
                         </form>
-
                     </div>
+                    <div class="col-sm-4 col-8 text-right m-b-30">
+                        <a class="btn btn-primary btn-rounded float-right" href="test.php"><i class="fa fa-plus"></i> Add Blog</a>
+                        <a class="btn btn-primary btn-rounded float-right" href="blogAZ.php"><i class="fa fa-plus"></i> Sort A - Z </a>
+                        <a class="btn btn-primary btn-rounded float-right" href="blogZA.php"><i class="fa fa-plus"></i> Sort Z - A </a>
+                    </div>
+
                 </div>
+                <?php $result = mysqli_query($conn, "SELECT * FROM blog ORDER BY blog_name DESC");
+                while ($row = mysqli_fetch_array($result)) { ?>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog grid-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.php?id=<?php echo $row['id'] ?>">
+                                    <?php echo '<img  src="data:image/jpeg;base64,' . base64_encode($row['blog_image']) . '"/>'; ?>
+                                </a>
+                            </div>
+                            <div class=" blog-content">
+                                <h3 class="blog-title"><a href="blog-details.html"><?php $row['blog_name'] ?>
+                                        <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i> <?php echo $row['blog_name'] ?></a>
+                                        <div class="blog-info clearfix">
+                                            <div class="post-left">
+                                                <ul>
+                                                    <li><a href="#."><i class="fa fa-calendar"></i> <span>December 6, 2017</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="post-right"><a href="#."><i class="fa fa-heart-o"></i>21</a> <a href="#."><i class="fa fa-eye"></i>8</a> <a href="#."><i class="fa fa-comment-o"></i>17</a></div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
             <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">
@@ -633,31 +552,10 @@ require 'dbh.php';
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/tagsinput.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 
 
-<!-- add-blog23:57-->
+<!-- blog23:51-->
 
 </html>
-<?php
-if (isset($_POST['update'])) {
-    $id = $_GET['id'];
-    $blogname = $_POST['blogname'];
-    $blogimage  = $_POST['blogimage'];
-    $blogdescription = $_POST['blogdescription'];
-
-
-    $sql = "UPDATE blog SET blog_name='$blogname', blog_image='$blogimage',blog_description='$blogdescription' WHERE id='$id'";
-    $query_run = mysqli_query($conn, $sql);
-    if ($query_run) {
-        echo '<script type="text/javascript"> alert("Data Updated")</script>';
-        header("Location: blog.php?BlogPOST=success");
-    } else {
-        echo '<script type="text/javascript"> alert("Data not Updated")</script>';
-    }
-}
-
-?>
